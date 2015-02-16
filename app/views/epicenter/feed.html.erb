@@ -1,0 +1,10 @@
+<h1>Beneath are the eliquent composures of your rightious company of harmonious souls.</h1>
+
+<div>
+	<% @following_tweets.each do | tweet | %>
+		<p>
+		<strong><%= link_to tweet.user.username, show_user_path(id: tweet.user.id) %></strong> said <br />
+		<%= tweet.message %>
+		</p>
+	<%end%>
+</div>

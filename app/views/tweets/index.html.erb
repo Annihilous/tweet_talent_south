@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tweets</h1>
+
+
+<div="container">
+    <% @tweets.each do |tweet| %>
+      <p>
+      <strong><%= link_to tweet.user.username, show_user_path(id: tweet.user.id) %></strong> said <br />
+      <%= tweet.message %>
+      </p>
+    <% end %>
+  </div>
+
+
